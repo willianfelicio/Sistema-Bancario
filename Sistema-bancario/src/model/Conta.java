@@ -11,6 +11,12 @@ public class Conta {
         this.saldo = saldo;
     }
 
+    public void exibirDados() {
+        System.out.println("Número da conta: " + this.numero);
+        System.out.println("Titular: " + this.titular);
+        System.out.println("Saldo: R$ " + this.saldo);
+    }
+
     public void depositar(double valor) {
         if(valor > 0) {
             this.saldo += valor;
@@ -27,5 +33,9 @@ public class Conta {
         }  else {
             System.out.println("Não foi possível realizar o saque. Valor inválido.");
         }
+    }
+
+    public int getNumero() {
+        return numero;
     }
 }
