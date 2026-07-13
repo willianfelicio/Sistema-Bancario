@@ -7,6 +7,7 @@ public class Banco {
     private ArrayList<Conta> listaDeContas;
 
     public Banco(String nome) {
+        this.nome = nome;
         this.listaDeContas = new ArrayList<>();
     }
 
@@ -23,7 +24,7 @@ public class Banco {
         }
         return null;
     }
-    public void listarConta(int numero) {
+    public void listarContas() {
         for (Conta conta : this.listaDeContas) {
            conta.exibirDados();
         }
